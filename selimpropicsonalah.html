@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>TEPELİ ANALİZ • THE SYNDICATE (SEP BEY TV Edition)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #00e5ff;
+            --primary-glow: rgba(0, 229, 255, 0.45);
+            --bg-base: #050507; 
+            --bg-dark: #090a0f; 
+            --panel-bg: rgba(13, 15, 20, 0.78);
+            --box-bg: rgba(18, 22, 30, 0.65);
+            --border: rgba(255, 255, 255, 0.06);
+            --border-cyan: rgba(0, 229, 255, 0.35);
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+            --live: #ff2a46;
+            --live-glow: rgba(255, 42, 70, 0.45);
+            --emerald: #10b981;
+            --emerald-glow: rgba(16, 185, 129, 0.45);
+            --gold: #f59e0b;
+            --gold-glow: rgba(245, 158, 11, 0.45);
+            --glass-blur: blur(24px) saturate(180%);
+            --transition-smooth: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; scrollbar-width: none !important; -ms-overflow-style: none !important; }
+        *::-webkit-scrollbar { display: none !important; width: 0 !important; }
+
+        body { 
+            font-family: 'Inter', sans-serif;
+            background: 
+                radial-gradient(circle at 50% 0%, rgba(0, 229, 255, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 100% 100%, rgba(0, 186, 255, 0.08) 0%, transparent 40%),
+                linear-gradient(rgba(5, 5, 7, 0.84), rgba(5, 5, 7, 0.94)),
+                url('https://i.ibb.co/VW2pBTxH/image.png') no-repeat center center fixed;
+            background-size: cover;
+            color: var(--text-main); 
+            padding: 24px 16px 110px;
+            min-height: 100vh;
+        }
+
+        .header-box { text-align: center; margin-bottom: 30px; }
+        .boss-tag {
+            display: inline-block;
+            background: rgba(0, 229, 255, 0.08);
+            border: 1px solid var(--border-cyan);
+            color: var(--primary);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.74em;
+            font-weight: 900;
+            letter-spacing: 3px;
+            padding: 6px 18px;
+            border-radius: 999px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            box-shadow: 0 0 20px rgba(0, 229, 255, 0.2);
+        }
+        h1 { 
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(1.8em, 5vw, 2.7em); 
+            font-weight: 950; 
+            letter-spacing: 1.5px; 
+            text-transform: uppercase;
+            background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 45%, var(--primary) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 4px 25px rgba(0, 229, 255, 0.25);
+        }
+        p.subtitle { color: var(--text-dim); font-size: 0.86em; margin-top: 8px; letter-spacing: 1px; text-transform: uppercase; font-weight: 700; }
+
+        .paste-container { 
+            max-width: 950px; 
+            margin: 0 auto 30px auto; 
+            background: var(--panel-bg); 
+            backdrop-filter: var(--glass-blur);
+            border: 1px solid rgba(255,255,255,0.06); 
+            border-radius: 18px; 
+            padding: 22px; 
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+            position: relative;
+        }
+        .paste-container::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+            background: linear-gradient(90deg, transparent, var(--primary), #38bdf8, transparent);
+        }
+        .paste-title { 
+            color: var(--primary); 
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 850; 
+            font-size: 0.96em; 
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+            text-align: center;
+        }
+        textarea { 
+            width: 100%; height: 98px; 
+            background: rgba(0, 0, 0, 0.55); 
+            color: #fff; 
+            border: 1px solid rgba(255, 255, 255, 0.08); 
+            padding: 14px 16px; border-radius: 12px; resize: none; 
+            font-family: inherit; font-size: 0.88em; 
+            transition: var(--transition-smooth);
+        }
+        textarea:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 20px var(--primary-glow); }
+        .btn-group-paste { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; margin-top: 15px; }
+        
+        .paste-btn { 
+            background: linear-gradient(135deg, var(--primary), #00bfff); 
+            color: #000; border: none; padding: 13px 30px; border-radius: 10px; cursor: pointer; 
+            font-family: 'Montserrat', sans-serif; font-weight: 850; letter-spacing: 1px; text-transform: uppercase; 
+            box-shadow: 0 8px 25px rgba(0, 229, 255, 0.35); transition: var(--transition-smooth);
+        }
+        .paste-btn:hover { background: #fff; transform: translateY(-2px); }
+        .clear-btn { background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.12); color: var(--text-dim); }
+        .clear-btn:hover { background: rgba(255, 42, 70, 0.15); color: #fff; border-color: var(--live); }
+        #pasteStatus { display: block; margin-top: 12px; font-size: 0.88em; font-weight: 700; text-align: center; }
+
+        .container { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; max-width: 1200px; margin: 0 auto; }
+        .team-panel { 
+            background: var(--panel-bg); backdrop-filter: var(--glass-blur);
+            padding: 24px; border-radius: 18px; flex: 1; min-width: 340px; max-width: 580px; 
+            border: 1px solid rgba(255,255,255,0.06); box-shadow: 0 20px 45px rgba(0,0,0,0.6); 
+        }
+        .team-panel.home-border { border-top: 3px solid var(--primary); }
+        .team-panel.away-border { border-top: 3px solid #38bdf8; }
+        .team-title { 
+            font-family: 'Montserrat', sans-serif; font-size: 1.15em; font-weight: 900; 
+            text-transform: uppercase; letter-spacing: 1.5px; padding-bottom: 14px; 
+            border-bottom: 1px solid rgba(255,255,255,0.06); display: flex; justify-content: space-between; align-items: center; 
+        }
+        .team-panel.home-border .team-title { color: #a5f3fc; }
+        .team-panel.away-border .team-title { color: #bae6fd; }
+
+        .match-box { 
+            background: var(--box-bg); padding: 14px; border-radius: 12px; margin-top: 14px; 
+            border: 1px solid var(--border); border-left: 3px solid rgba(0, 229, 255, 0.4); 
+        }
+        .match-title { font-family: 'Montserrat', sans-serif; font-weight: 850; font-size: 0.82em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 10px; display: flex; justify-content: space-between; }
+        .stats-split { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        .stats-col { background: rgba(0, 0, 0, 0.3); padding: 8px 10px; border-radius: 8px; }
+        .col-title { font-family: 'Montserrat', sans-serif; font-size: 0.72em; color: var(--primary); font-weight: 850; text-transform: uppercase; margin-bottom: 8px; text-align: center; border-bottom: 1px dashed rgba(255,255,255,0.08); padding-bottom: 4px; }
+        .input-group { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+        .input-group label { font-size: 0.74em; color: var(--text-dim); font-weight: 600; }
+        .input-group input { width: 44px; background: #090a0f; border: 1px solid rgba(255,255,255,0.12); color: #fff; padding: 5px; border-radius: 6px; text-align: center; font-weight: 850; font-family: 'JetBrains Mono', monospace; font-size: 0.85em; }
+
+        .btn-container { text-align: center; margin: 42px 0; }
+        button.main-btn { 
+            background: linear-gradient(135deg, #00e5ff 0%, #00bfff 50%, #0088cc 100%); 
+            color: #050507; border: none; padding: 18px 52px; font-size: clamp(1em, 3.5vw, 1.25em); 
+            font-family: 'Montserrat', sans-serif; font-weight: 950; border-radius: 14px; cursor: pointer; 
+            text-transform: uppercase; letter-spacing: 2px; box-shadow: 0 10px 40px rgba(0, 229, 255, 0.45); 
+            transition: var(--transition-smooth);
+        }
+        button.main-btn:hover { background: #fff; transform: translateY(-3px) scale(1.02); }
+
+        .result-panel { 
+            background: linear-gradient(145deg, rgba(13, 15, 22, 0.95), rgba(7, 8, 12, 0.98)); 
+            backdrop-filter: var(--glass-blur); padding: 32px; border-radius: 20px; max-width: 950px; margin: 0 auto 50px auto; 
+            display: none; border: 1px solid var(--border-cyan); box-shadow: 0 25px 70px rgba(0, 0, 0, 0.9); 
+        }
+
+        .trap-warning-box {
+            background: linear-gradient(135deg, rgba(255, 42, 70, 0.25), rgba(15, 6, 9, 0.95));
+            border: 2px solid var(--live); border-radius: 14px; padding: 18px 22px; margin-bottom: 25px; text-align: center;
+        }
+        .trap-badge { background: var(--live); color: #fff; font-family: 'Montserrat', sans-serif; font-weight: 950; font-size: 0.78em; padding: 5px 16px; border-radius: 999px; text-transform: uppercase; margin-bottom: 8px; display: inline-block; }
+        .trap-title { color: #fff; font-family: 'Montserrat', sans-serif; font-weight: 950; font-size: 1.15em; text-transform: uppercase; margin-bottom: 8px; }
+        .trap-desc { color: #fecdd3; font-size: 0.88em; font-weight: 600; line-height: 1.65; text-align: left; background: rgba(0,0,0,0.45); padding: 14px 18px; border-radius: 10px; }
+        .typing-cursor { display: inline-block; width: 3px; height: 1.1em; background-color: var(--primary); vertical-align: text-bottom; margin-left: 3px; animation: blinkCursor 0.6s infinite; }
+        @keyframes blinkCursor { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+        .trap-advice-box { margin-top: 10px; color: #fef08a; font-weight: 850; border-top: 1px dashed rgba(255,255,255,0.2); padding-top: 8px; }
+
+        .vip-confidence-box {
+            background: rgba(10, 14, 22, 0.35); backdrop-filter: blur(16px);
+            border: 1px solid rgba(0, 229, 255, 0.25); border-radius: 16px; padding: 22px; margin-bottom: 25px;
+        }
+        .vip-box-title {
+            text-align: center; font-family: 'Montserrat', sans-serif; font-size: 1.15em; font-weight: 950; 
+            letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px;
+            text-shadow: 0 0 16px var(--gold-glow);
+        }
+        .vip-cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+        .vip-card {
+            background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px);
+            border-radius: 12px; padding: 14px 18px; display: flex; justify-content: space-between; align-items: center; 
+            border: 1px solid rgba(255, 255, 255, 0.08); transition: var(--transition-smooth);
+        }
+        .vip-card:hover { transform: translateY(-3px); background: rgba(255, 255, 255, 0.08); }
+        .vip-card.tier-high { border-left: 4px solid var(--emerald); box-shadow: 0 0 20px rgba(16, 185, 129, 0.15); }
+        .vip-card.tier-mid { border-left: 4px solid var(--primary); box-shadow: 0 0 20px rgba(0, 229, 255, 0.15); }
+        .vip-card.tier-low { border-left: 4px solid #f97316; }
+        .vip-card.tier-warn { border-left: 4px solid var(--gold); box-shadow: 0 0 20px rgba(245, 158, 11, 0.15); } 
+        
+        .vip-card-left { display: flex; flex-direction: column; gap: 5px; }
+        .vip-card-name { font-family: 'Inter', sans-serif; font-size: 0.95em; font-weight: 850; color: #fff; text-transform: uppercase; }
+        .vip-card-badge { font-family: 'Montserrat', sans-serif; font-size: 0.72em; font-weight: 850; padding: 2px 8px; border-radius: 4px; width: fit-content; text-transform: uppercase; }
+        .badge-green { background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid var(--emerald); }
+        .badge-cyan { background: rgba(0, 229, 255, 0.2); color: var(--primary); border: 1px solid var(--primary); }
+        .badge-warn { background: rgba(245, 158, 11, 0.2); color: var(--gold); border: 1px solid var(--gold); }
+        
+        .vip-card-right { text-align: right; }
+        .vip-card-pct { font-family: 'JetBrains Mono', monospace; font-size: 1.85em; font-weight: 950; }
+        .pct-green { color: #34d399; text-shadow: 0 0 15px var(--emerald-glow); }
+        .pct-cyan { color: var(--primary); text-shadow: 0 0 15px var(--primary-glow); }
+        .pct-warn { color: var(--gold); text-shadow: 0 0 15px var(--gold-glow); }
+
+        .scoreboard { 
+            background: rgba(3, 4, 7, 0.75); backdrop-filter: blur(12px); padding: 24px; border-radius: 16px; 
+            border: 1px solid rgba(255, 255, 255, 0.06); margin-bottom: 25px; display: flex; justify-content: space-around; align-items: center; 
+        }
+        .team-name { font-family: 'Montserrat', sans-serif; font-size: clamp(1.1em, 3.5vw, 1.8em); font-weight: 950; color: #f1f5f9; flex: 1; text-align: center; text-transform: uppercase; }
+        .score-display { 
+            font-size: clamp(3em, 8vw, 5em); font-weight: 950; font-family: 'JetBrains Mono', monospace; 
+            background: linear-gradient(180deg, #ffffff 0%, var(--primary) 100%); -webkit-background-clip: text; background-clip: text; color: transparent; 
+            padding: 0 25px; filter: drop-shadow(0 0 25px var(--primary-glow)); 
+        }
+
+        .output-section { 
+            margin-top: 15px; background: rgba(5, 6, 9, 0.6); backdrop-filter: blur(12px); padding: 16px 20px; 
+            border-radius: 12px; border: 1px solid var(--border); border-left: 4px solid var(--primary); font-size: 0.9em; line-height: 1.65; 
+        }
+        .output-title { font-family: 'Montserrat', sans-serif; font-weight: 900; color: #ffffff; font-size: 1.05em; margin-bottom: 6px; text-transform: uppercase; }
+        .output-text { color: #cbd5e1; font-weight: 500; }
+        .final-score-box { 
+            text-align: center; margin-top: 30px; font-family: 'Montserrat', sans-serif; font-size: clamp(1.2em, 4vw, 1.7em); 
+            font-weight: 950; text-transform: uppercase; color: #fff; background: linear-gradient(135deg, rgba(0, 229, 255, 0.15), rgba(0, 153, 255, 0.15)); 
+            border: 2px solid var(--primary); padding: 20px; border-radius: 14px; box-shadow: 0 0 35px var(--primary-glow); 
+        }
+
+        .vinyl-widget { position: fixed; bottom: 25px; right: 25px; z-index: 99999; display: flex; align-items: center; gap: 12px; }
+        .vinyl-controls { display: flex; align-items: center; gap: 8px; background: rgba(11, 13, 19, 0.92); border: 1px solid var(--border-cyan); padding: 7px 12px; border-radius: 30px; backdrop-filter: var(--glass-blur); }
+        .vinyl-vol-slider { -webkit-appearance: none; width: 65px; height: 4px; border-radius: 2px; background: rgba(255,255,255,0.18); outline: none; cursor: pointer; }
+        .vinyl-vol-slider::-webkit-slider-thumb { -webkit-appearance: none; width: 12px; height: 12px; border-radius: 50%; background: var(--primary); cursor: pointer; }
+        .vinyl-container { position: relative; width: 74px; height: 74px; cursor: pointer; }
+        .vinyl-disc { 
+            width: 100%; height: 100%; border-radius: 50%; 
+            background: repeating-radial-gradient(circle, #08090c 0px, #15171e 1.5px, #08090c 2.5px, #1c1e28 4px); 
+            border: 2px solid #272a38; animation: spinVinyl 3s linear infinite; animation-play-state: paused; 
+            display: flex; align-items: center; justify-content: center;
+        }
+        .vinyl-disc.playing { animation-play-state: running; box-shadow: 0 0 25px var(--primary-glow); }
+        .vinyl-label { width: 28px; height: 28px; border-radius: 50%; background: radial-gradient(circle, #00e5ff 0%, #0077b6 75%, #050608 100%); border: 2px solid #fff; display: flex; align-items: center; justify-content: center; }
+        .vinyl-label-center { width: 6px; height: 6px; background: #050608; border-radius: 50%; border: 1px solid rgba(255,255,255,0.4); }
+        .vinyl-tonearm { position: absolute; top: -6px; right: 0px; width: 28px; height: 48px; pointer-events: none; transform-origin: 22px 6px; transform: rotate(-35deg); transition: transform 0.5s; z-index: 5; }
+        .vinyl-tonearm.active { transform: rotate(5deg); }
+        @keyframes spinVinyl { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+        @media (max-width: 768px) {
+            body { padding: 12px; padding-bottom: 95px; }
+            .team-panel { min-width: 100%; padding: 16px; }
+            .scoreboard { padding: 15px 5px; }
+            .result-panel { padding: 18px 14px; }
+            .vip-cards-grid { grid-template-columns: 1fr; }
+            .vinyl-widget { bottom: 15px; right: 15px; }
+            .vinyl-container { width: 60px; height: 60px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-box">
+        <span class="boss-tag">SEP BEY ANALYTICS TERMINAL</span>
+        <h1>🦅 TEPELİ ANALİZ • THE SYNDICATE 🩸</h1>
+        <p class="subtitle">Mourinho Zekası • AIPROV Karar Motoru & Sıklet İnfaz Masası</p>
+    </div>
+
+    <div class="paste-container">
+        <div class="paste-title">⚡ FLASHSCORE VERİLERİNİ YAPIŞTIR</div>
+        <textarea id="pasteArea" placeholder="İki takımın son maç istatistiklerini buraya atın. Sistem veriyi saniyeler içinde cımbızlayıp infaz masasına dizer..."></textarea>
+        <div class="btn-group-paste">
+            <button class="paste-btn" onclick="parseFlashscoreData()">Akıllı Dağıtımı Başlat 🪄</button>
+            <button class="paste-btn clear-btn" onclick="clearPasteArea()">🗑️ Metni Temizle</button>
+        </div>
+        <span id="pasteStatus"></span>
+    </div>
+
+    <div class="container">
+        <div class="team-panel home-border" id="teamA">
+            <div class="team-title">
+                <span>🏠 EV SAHİBİ (A)</span>
+                <span id="detectedA" class="detected-team">BEKLENİYOR...</span>
+            </div>
+            <div id="matchesA"></div>
+        </div>
+
+        <div class="team-panel away-border" id="teamB">
+            <div class="team-title">
+                <span>✈️ DEPLASMAN (B)</span>
+                <span id="detectedB" class="detected-team">BEKLENİYOR...</span>
+            </div>
+            <div id="matchesB"></div>
+        </div>
+    </div>
+
+    <div class="btn-container">
+        <button id="simBtn" class="main-btn" onclick="analizYap()">💀 TEPELİ ANALİZİ BAŞLAT (İNFAZ MODU) 🚀</button>
+    </div>
+
+    <div class="result-panel" id="resultPanel">
+        <div id="trapWarningContainer"></div>
+
+        <div class="scoreboard">
+            <div class="team-name" id="scoreNameA">EV SAHİBİ</div>
+            <div class="score-display" id="liveScore">0-0</div>
+            <div class="team-name" id="scoreNameB">DEPLASMAN</div>
+        </div>
+
+        <div class="vip-confidence-box">
+            <div class="vip-box-title">💎 VIP İNFAZ MASASI • EN GÜVENİLİR TERCİHLER 🎯</div>
+            <div class="vip-cards-grid" id="vipCardsGrid"></div>
+        </div>
+
+        <div id="analysisContent"></div>
+    </div>
+
+    <div class="vinyl-widget" id="vinylWidget">
+        <div class="vinyl-controls" id="vinylControls">
+            <span style="font-size:0.9em; cursor:pointer;" onclick="toggleMute()" id="muteIcon">🔊</span>
+            <input type="range" class="vinyl-vol-slider" id="volumeSlider" min="0" max="100" value="75" oninput="adjustVolume(this.value)">
+        </div>
+        <div class="vinyl-container" onclick="toggleVinylMusic()" title="Plağa Tıkla: Başlat / Durdur">
+            <div class="vinyl-disc" id="vinylDisc">
+                <div class="vinyl-label"><div class="vinyl-label-center"></div></div>
+            </div>
+            <svg class="vinyl-tonearm" id="vinylTonearm" viewBox="0 0 28 48">
+                <circle cx="22" cy="6" r="4.5" fill="#00e5ff" stroke="#000" stroke-width="1.5" />
+                <path d="M22 6 L12 28 L9 42" fill="none" stroke="#e2e8f0" stroke-width="2.2" stroke-linecap="round" />
+                <rect x="6" y="40" width="6" height="7" rx="1.5" fill="#00e5ff" stroke="#000" stroke-width="0.8" />
+            </svg>
+        </div>
+    </div>
+
+    <audio id="scarfaceAudio" loop preload="auto">
+        <source src="https://media1.vocaroo.com/mp3/1hU0tT3p83u6" type="audio/mpeg">
+        <source src="https://media.vocaroo.com/mp3/1hU0tT3p83u6" type="audio/mpeg">
+    </audio>
+
+    <script>
+        const audio = document.getElementById('scarfaceAudio');
+        const vinylDisc = document.getElementById('vinylDisc');
+        const vinylTonearm = document.getElementById('vinylTonearm');
+        const volumeSlider = document.getElementById('volumeSlider');
+        const muteIcon = document.getElementById('muteIcon');
+        audio.volume = 0.75;
+        let isMusicPlaying = false;
+
+        function toggleVinylMusic() {
+            if (isMusicPlaying) {
+                audio.pause();
+                vinylDisc.classList.remove('playing');
+                vinylTonearm.classList.remove('active');
+                isMusicPlaying = false;
+            } else {
+                let playPromise = audio.play();
+                if (playPromise !== undefined) {
+                    playPromise.then(() => {
+                        vinylDisc.classList.add('playing');
+                        vinylTonearm.classList.add('active');
+                        isMusicPlaying = true;
+                    }).catch(err => {
+                        console.log("Ses oynatma hatası:", err);
+                    });
+                }
+            }
+        }
+
+        function adjustVolume(val) {
+            audio.volume = val / 100;
+            muteIcon.innerText = (val == 0) ? "🔇" : (val < 50 ? "🔉" : "🔊");
+        }
+
+        function toggleMute() {
+            if (audio.volume > 0) {
+                audio.dataset.prevVol = audio.volume;
+                audio.volume = 0;
+                volumeSlider.value = 0;
+                muteIcon.innerText = "🔇";
+            } else {
+                let restore = audio.dataset.prevVol || 0.75;
+                audio.volume = restore;
+                volumeSlider.value = restore * 100;
+                muteIcon.innerText = "🔊";
+            }
+        }
+
+        function createMatchInputs(teamId, prefix) {
+            let html = '';
+            for(let i=1; i<=3; i++) {
+                html += `
+                <div class="match-box">
+                    <div class="match-title">
+                        <span>SON ${i}. MAÇ</span>
+                        <span style="font-size:0.75em; opacity:0.6;">STAGE ${i}</span>
+                    </div>
+                    <div class="stats-split">
+                        <div class="stats-col">
+                            <div class="col-title">Kendi Gücü</div>
+                            <div class="input-group"><label>Topla Oyn.(%)</label><input type="number" id="${prefix}_m${i}_pos"></div>
+                            <div class="input-group"><label>Toplam Şut</label><input type="number" id="${prefix}_m${i}_ts"></div>
+                            <div class="input-group"><label>İsabetli Şut</label><input type="number" id="${prefix}_m${i}_sot"></div>
+                            <div class="input-group"><label>Korner</label><input type="number" id="${prefix}_m${i}_cor"></div>
+                            <div class="input-group"><label style="color:#34d399; font-weight:900;">Attığı Gol</label><input type="number" id="${prefix}_m${i}_gf"></div>
+                        </div>
+                        <div class="stats-col">
+                            <div class="col-title">Rakip Baskı</div>
+                            <div class="input-group"><label>Topla Oyn.(%)</label><input type="number" id="${prefix}_m${i}_opos"></div>
+                            <div class="input-group"><label>Toplam Şut</label><input type="number" id="${prefix}_m${i}_ots"></div>
+                            <div class="input-group"><label>İsabetli Şut</label><input type="number" id="${prefix}_m${i}_osot"></div>
+                            <div class="input-group"><label>Korner</label><input type="number" id="${prefix}_m${i}_ocor"></div>
+                            <div class="input-group"><label style="color:#f87171; font-weight:900;">Yediği Gol</label><input type="number" id="${prefix}_m${i}_ga"></div>
+                        </div>
+                    </div>
+                </div>`;
+            }
+            document.getElementById(teamId).innerHTML += html;
+        }
+
+        createMatchInputs('matchesA', 'ta');
+        createMatchInputs('matchesB', 'tb');
+
+        window.tempMatchXG = { ta: [null, null, null], tb: [null, null, null] };
+        window.isFriendlyMatch = false;
+        window.isChaoticLeague = false;
+
+        function clearPasteArea() {
+            document.getElementById('pasteArea').value = '';
+            let status = document.getElementById('pasteStatus');
+            status.innerText = '🧹 İstatistik alanı temizlendi.';
+            status.style.color = 'var(--text-dim)';
+        }
+
+        function parseFlashscoreData() {
+            let text = document.getElementById('pasteArea').value;
+            let statusLabel = document.getElementById('pasteStatus');
+            
+            let topHeader = text.substring(0, 450);
+            window.isFriendlyMatch = /Friendly|Hazırlık/i.test(topHeader);
+            window.isChaoticLeague = /National League|League Two|League One|Regionalliga|Segunda|TFF 2|TFF 3|Serie C|2nd Division|1st Division|Division 2/i.test(topHeader);
+
+            let lines = text.split('\n');
+            let blocks = [];
+            let currentBlock = [];
+            
+            for(let line of lines) {
+                if(/ v .* \(\d{2}\/\d{2}\/\d{4}\)/.test(line)) {
+                    if(currentBlock.length > 0) blocks.push(currentBlock.join('\n'));
+                    currentBlock = [line];
+                } else {
+                    currentBlock.push(line);
+                }
+            }
+            if(currentBlock.length > 0) blocks.push(currentBlock.join('\n'));
+
+            let parsedMatches = [];
+
+            for(let block of blocks) {
+                let matchData = {};
+                let headerMatch = block.match(/(.+?) v (.+?)\s+\(\d{2}\/\d{2}\/\d{4}\)/);
+                if(!headerMatch) continue; 
+                matchData.t1 = headerMatch[1].trim();
+                matchData.t2 = headerMatch[2].trim();
+
+                let g1 = 0, g2 = 0;
+                let scoreFound = false;
+
+                let scoreMatchA = block.match(/(\d+)[\s\n]*[\-–—−:][\s\n]*(\d+)[\s\n]*(Finished|Bitti|MS|FT|After Extra Time|AET|Pen|Penalties|Uzatmalar)/i);
+                if (scoreMatchA) {
+                    g1 = parseInt(scoreMatchA[1]);
+                    g2 = parseInt(scoreMatchA[2]);
+                    scoreFound = true;
+                }
+
+                if (!scoreFound) {
+                    let scoreMatchB = block.match(/(\d+)[\r\n\s]+(\d+)[\r\n\s]+(Finished|Bitti|MS|FT|After Extra Time|AET|Pen|Penalties|Uzatmalar)/i);
+                    if (scoreMatchB) {
+                        g1 = parseInt(scoreMatchB[1]);
+                        g2 = parseInt(scoreMatchB[2]);
+                        scoreFound = true;
+                    }
+                }
+
+                matchData.g1 = g1;
+                matchData.g2 = g2;
+
+                let xgMatch = block.match(/([\d.]+)[\s\n]*Expected goals \(xG\)[\s\n]*([\d.]+)/i);
+                matchData.xg1 = xgMatch ? parseFloat(xgMatch[1]) : null;
+                matchData.xg2 = xgMatch ? parseFloat(xgMatch[2]) : null;
+
+                let posMatch = block.match(/(\d+)%[\s\n]*(Ball possession|Topla oynama)[\s\n]*(\d+)%/i);
+                matchData.pos1 = posMatch ? parseInt(posMatch[1]) : 50;
+                matchData.pos2 = posMatch ? parseInt(posMatch[3]) : 50;
+
+                let tsMatch = block.match(/(\d+)[\s\n]*(Total shots|Toplam Şut|Toplam şut)[\s\n]*(\d+)/i);
+                matchData.ts1 = tsMatch ? parseInt(tsMatch[1]) : 0;
+                matchData.ts2 = tsMatch ? parseInt(tsMatch[3]) : 0;
+
+                let sotMatch = block.match(/(\d+)[\s\n]*(Shots on target|İsabetli şut|İsabetli Şut)[\s\n]*(\d+)/i);
+                matchData.sot1 = sotMatch ? parseInt(sotMatch[1]) : 0;
+                matchData.sot2 = sotMatch ? parseInt(sotMatch[3]) : 0;
+
+                let corMatch = block.match(/(\d+)[\s\n]*(Corner kicks|Kornerler|Korner)[\s\n]*(\d+)/i);
+                matchData.cor1 = corMatch ? parseInt(corMatch[1]) : 0;
+                matchData.cor2 = corMatch ? parseInt(corMatch[3]) : 0;
+
+                parsedMatches.push(matchData);
+            }
+
+            if(parsedMatches.length === 0) {
+                statusLabel.innerText = "⚠️ Geçerli maç bulunamadı. Lütfen Flashscore formatında yapıştırın.";
+                statusLabel.style.color = "var(--live)";
+                return;
+            }
+
+            function getMainTeam(matchArray) {
+                let counts = {};
+                matchArray.forEach(m => { counts[m.t1] = (counts[m.t1]||0)+1; counts[m.t2] = (counts[m.t2]||0)+1; });
+                return Object.keys(counts).reduce((a, b) => counts[a] > counts[b] ? a : b);
+            }
+
+            let logA = [];
+            let logB = [];
+
+            function fillTeamBoxes(prefix, matchesToFill) {
+                let mainTeam = getMainTeam(matchesToFill);
+                document.getElementById(prefix === 'ta' ? 'detectedA' : 'detectedB').innerText = `(${mainTeam})`;
+                document.getElementById(prefix === 'ta' ? 'scoreNameA' : 'scoreNameB').innerText = mainTeam.toUpperCase();
+                
+                matchesToFill.forEach((m, idx) => {
+                    let i = idx + 1;
+                    if(i > 3) return;
+                    let isTargetHome = (m.t1 === mainTeam);
+                    
+                    let myGF = isTargetHome ? m.g1 : m.g2;
+                    let myGA = isTargetHome ? m.g2 : m.g1;
+
+                    if(prefix === 'ta') logA.push(`${myGF}-${myGA}`);
+                    else logB.push(`${myGF}-${myGA}`);
+
+                    document.getElementById(`${prefix}_m${i}_gf`).value = myGF;
+                    document.getElementById(`${prefix}_m${i}_ga`).value = myGA;
+                    document.getElementById(`${prefix}_m${i}_pos`).value = isTargetHome ? m.pos1 : m.pos2;
+                    document.getElementById(`${prefix}_m${i}_opos`).value = isTargetHome ? m.pos2 : m.pos1;
+                    document.getElementById(`${prefix}_m${i}_ts`).value = isTargetHome ? m.ts1 : m.ts2;
+                    document.getElementById(`${prefix}_m${i}_ots`).value = isTargetHome ? m.ts2 : m.ts1;
+                    document.getElementById(`${prefix}_m${i}_sot`).value = isTargetHome ? m.sot1 : m.sot2;
+                    document.getElementById(`${prefix}_m${i}_osot`).value = isTargetHome ? m.sot2 : m.sot1;
+                    document.getElementById(`${prefix}_m${i}_cor`).value = isTargetHome ? m.cor1 : m.cor2;
+                    document.getElementById(`${prefix}_m${i}_ocor`).value = isTargetHome ? m.cor2 : m.cor1;
+
+                    window.tempMatchXG[prefix][i-1] = {
+                        xg: isTargetHome ? m.xg1 : m.xg2,
+                        xga: isTargetHome ? m.xg2 : m.xg1
+                    };
+                });
+            }
+
+            if(parsedMatches.length >= 6) {
+                fillTeamBoxes('ta', parsedMatches.slice(0, 3));
+                fillTeamBoxes('tb', parsedMatches.slice(3, 6));
+                statusLabel.innerHTML = `✅ 6 Maç Çözüldü!<br><span style="color:#34d399;">Ev Skorları: [${logA.join(', ')}]</span> | <span style="color:var(--primary);">Dep Skorları: [${logB.join(', ')}]</span>`;
+                statusLabel.style.color = "var(--primary)";
+            } else if(parsedMatches.length === 3) {
+                if(document.getElementById('ta_m1_ts').value === "") {
+                    fillTeamBoxes('ta', parsedMatches);
+                    statusLabel.innerHTML = `✅ 3 Maç Ev Sahibi'ne Dağıtıldı. Skorlar: [${logA.join(', ')}]`;
+                    statusLabel.style.color = "var(--primary)";
+                } else {
+                    fillTeamBoxes('tb', parsedMatches);
+                    statusLabel.innerHTML = `✅ 3 Maç Deplasman'a Dağıtıldı. Skorlar: [${logB.join(', ')}]`;
+                    statusLabel.style.color = "var(--primary)";
+                }
+            }
+        }
+
+        function getTeamStats(prefix) {
+            let stats = { matches: [], total_gf: 0, total_ga: 0, total_ts: 0, total_sot: 0, total_xg: 0, total_xga: 0, kg_count: 0, cs_count: 0, zero_goals_count: 0, avg_pos: 0 };
+            for(let i=1; i<=3; i++) {
+                let ts = parseFloat(document.getElementById(`${prefix}_m${i}_ts`).value) || 0;
+                let sot = parseFloat(document.getElementById(`${prefix}_m${i}_sot`).value) || 0;
+                let ots = parseFloat(document.getElementById(`${prefix}_m${i}_ots`).value) || 0;
+                let osot = parseFloat(document.getElementById(`${prefix}_m${i}_osot`).value) || 0;
+
+                let match = {
+                    pos: parseFloat(document.getElementById(`${prefix}_m${i}_pos`).value) || 0,
+                    ts: ts, 
+                    sot: sot, 
+                    ots: ots, 
+                    osot: osot,
+                    gf: parseFloat(document.getElementById(`${prefix}_m${i}_gf`).value) || 0,
+                    ga: parseFloat(document.getElementById(`${prefix}_m${i}_ga`).value) || 0,
+                    xg: (window.tempMatchXG[prefix][i-1]?.xg) || (sot * 0.22 + (ts > sot ? (ts-sot)*0.03 : 0)) || 0.8,
+                    xga: (window.tempMatchXG[prefix][i-1]?.xga) || (osot * 0.22 + (ots > osot ? (ots-osot)*0.03 : 0)) || 0.8
+                };
+                stats.matches.push(match);
+                stats.total_gf += match.gf;
+                stats.total_ga += match.ga;
+                stats.total_ts += match.ts;
+                stats.total_sot += match.sot;
+                stats.total_xg += match.xg;
+                stats.total_xga += match.xga;
+                stats.avg_pos += match.pos;
+                
+                if(match.gf > 0 && match.ga > 0) stats.kg_count++;
+                if(match.ga === 0) stats.cs_count++;
+                if(match.gf === 0) stats.zero_goals_count++;
+            }
+            stats.avg_pos /= 3;
+            stats.avg_gf = stats.total_gf / 3;
+            stats.avg_ga = stats.total_ga / 3;
+            stats.avg_xg = stats.total_xg / 3;
+            stats.avg_xga = stats.total_xga / 3;
+            return stats;
+        }
+
+        async function runTrapTypewriter(badgeText, titleText, reasons, adviceText) {
+            const container = document.getElementById('trapWarningContainer');
+            container.innerHTML = `
+                <div class="trap-warning-box">
+                    <div><span class="trap-badge" id="twBadge"></span></div>
+                    <div class="trap-title" id="twTitle"></div>
+                    <div class="trap-desc" id="twDesc"></div>
+                </div>
+            `;
+
+            const badgeEl = document.getElementById('twBadge');
+            const titleEl = document.getElementById('twTitle');
+            const descEl = document.getElementById('twDesc');
+
+            const cursor = document.createElement('span');
+            cursor.className = 'typing-cursor';
+
+            function typeInto(el, text, speed) {
+                return new Promise(resolve => {
+                    el.appendChild(cursor);
+                    let chars = Array.from(text);
+                    let i = 0;
+                    let timer = setInterval(() => {
+                        if (i < chars.length) {
+                            cursor.insertAdjacentText('beforebegin', chars[i]);
+                            i++;
+                        } else {
+                            clearInterval(timer);
+                            cursor.remove();
+                            resolve();
+                        }
+                    }, speed);
+                });
+            }
+
+            await typeInto(badgeEl, badgeText, 25);
+            await new Promise(r => setTimeout(r, 120));
+
+            await typeInto(titleEl, titleText, 20);
+            await new Promise(r => setTimeout(r, 150));
+
+            for (let reason of reasons) {
+                let lineDiv = document.createElement('div');
+                lineDiv.style.marginBottom = '8px';
+                descEl.appendChild(lineDiv);
+                await typeInto(lineDiv, reason, 12);
+                await new Promise(r => setTimeout(r, 80));
+            }
+
+            let adviceDiv = document.createElement('div');
+            adviceDiv.className = 'trap-advice-box';
+            descEl.appendChild(adviceDiv);
+            await typeInto(adviceDiv, adviceText, 14);
+        }
+
+        // ========================================================
+        // 🦅 TEPELİ ANALİZ: AIPROV KARAR MOTORU V24 (KASALIK BANKO GÜCÜ SERBEST BIRAKILDI)
+        // ========================================================
+        function analizYap() {
+            let btn = document.getElementById('simBtn');
+            btn.innerText = "🩸 İnfaz Başlatıldı • Hesap Sürülüyor... 🧠";
+            btn.disabled = true;
+
+            try {
+                let a = getTeamStats('ta');
+                let b = getTeamStats('tb');
+
+                let a_gf_w = a.matches[0].gf * 0.50 + a.matches[1].gf * 0.30 + a.matches[2].gf * 0.20;
+                let a_ga_w = a.matches[0].ga * 0.50 + a.matches[1].ga * 0.30 + a.matches[2].ga * 0.20;
+                let b_gf_w = b.matches[0].gf * 0.50 + b.matches[1].gf * 0.30 + b.matches[2].gf * 0.20;
+                let b_ga_w = b.matches[0].ga * 0.50 + b.matches[1].ga * 0.30 + b.matches[2].ga * 0.20;
+
+                let a_xg_w = a.matches[0].xg * 0.50 + a.matches[1].xg * 0.30 + a.matches[2].xg * 0.20;
+                let b_xg_w = b.matches[0].xg * 0.50 + b.matches[1].xg * 0.30 + b.matches[2].xg * 0.20;
+                let a_xga_w = a.matches[0].xga * 0.50 + a.matches[1].xga * 0.30 + a.matches[2].xga * 0.20;
+                let b_xga_w = b.matches[0].xga * 0.50 + b.matches[1].xga * 0.30 + b.matches[2].xga * 0.20;
+
+                let eff_att_A = (a_gf_w * 0.35) + (a_xg_w * 0.45) + (a.avg_gf * 0.20);
+                let eff_def_B = (b_ga_w * 0.35) + (b_xga_w * 0.45) + (b.avg_ga * 0.20);
+                let eff_att_B = (b_gf_w * 0.35) + (b_xg_w * 0.45) + (b.avg_gf * 0.20);
+                let eff_def_A = (a_ga_w * 0.35) + (a_xga_w * 0.45) + (a.avg_ga * 0.20);
+
+                let a_avg_ts = a.total_ts / 3;
+                let b_avg_ts = b.total_ts / 3;
+
+                if (eff_att_A > 3.5) eff_att_A = 3.5 + Math.sqrt(eff_att_A - 3.5);
+                if (eff_att_B > 3.5) eff_att_B = 3.5 + Math.sqrt(eff_att_B - 3.5);
+
+                let lambda1 = (eff_att_A * 0.65) + (eff_def_B * 0.35) + 0.20;
+                let lambda2 = (eff_att_B * 0.55) + (eff_def_A * 0.45) - 0.10;
+
+                let output_trend = ""; 
+                let output_katsayi = ""; 
+                let isTrap = false;
+                let trapReasons = [];
+
+                // KEVGİR SAVUNMA TESPİTİ
+                if (a.avg_ga >= 1.7) {
+                    lambda2 = Math.max(lambda2 * 1.35, 1.65);
+                    output_trend += `💥 KEVGİR SAVUNMA (EV): Ev sahibi son maçlarında kalesinde ${a.total_ga} gol gördü. Savunması dağılmış durumda, deplasman en az 2 gol bulabilir! `;
+                }
+                if (b.avg_ga >= 1.7) {
+                    lambda1 = Math.max(lambda1 * 1.35, 1.75);
+                    output_trend += `💥 KEVGİR SAVUNMA (DEP): Deplasman takımı son maçlarında kalesinde ${b.total_ga} gol gördü. Ev sahibinin gol baskısı en üst seviyeye ulaştı! `;
+                }
+
+                let a_xga_diff = a.total_xga - a.total_ga;
+                let b_xga_diff = b.total_xga - b.total_ga;
+                let a_xg_diff = a.total_xg - a.total_gf;
+                let b_xg_diff = b.total_xg - b.total_gf;
+
+                if (b.total_ga >= 4 && a.total_ga <= 3) {
+                    lambda1 += 0.38;
+                    lambda2 *= 0.75; 
+                    output_katsayi += `🏟️ DEPLASMAN FOBİSİ: Deplasman ekibi son maçlarında kalesinde ${b.total_ga} gol gördü. Ev sahibi ise katı savunmayla sadece ${a.total_ga} gol yedi. Kendi seyircisi önünde oynayan Ev Sahibi maçı domine eder! `;
+                }
+
+                if (a_xga_diff > 1.25 && b.total_xg >= 2.85) {
+                    let bombBoost = Math.min(a_xga_diff * 0.15, 0.35); 
+                    lambda2 += bombBoost;
+                    output_trend += `🧨 SAATLİ BOMBA (EV SAVUNMASI): Ev sahibi şans eseri az gol yemiş (xGA: ${a.total_xga.toFixed(2)}). Savunma riskli! `;
+                }
+
+                if (b_xga_diff > 1.25 && a.total_xg >= 2.85) {
+                    let bombBoost = Math.min(b_xga_diff * 0.30, 0.75); 
+                    lambda1 += bombBoost;
+                    output_trend += `🧨 SAATLİ BOMBA (DEP SAVUNMASI): Deplasman savunması aşırı şanslıydı (xGA: ${b.total_xga.toFixed(2)}). Ev Sahibi bu balonu fena patlatır! `;
+                }
+
+                if (a_xg_diff > 0.9) {
+                    lambda1 += Math.min(a_xg_diff * 0.22, 0.50);
+                    output_trend += `🔥 GİZLİ HÜCUM POTANSİYELİ (EV): Ev sahibi pozisyona giriyor ama bitiremiyordu (Gol: ${a.total_gf} / xG: ${a.total_xg.toFixed(2)}). `;
+                }
+                if (b_xg_diff > 0.9) {
+                    lambda2 += Math.min(b_xg_diff * 0.22, 0.50);
+                    output_trend += `🔥 GİZLİ HÜCUM POTANSİYELİ (DEP): Deplasman ekibi pozisyon üretiyor ancak skora yansıtamıyordu (Gol: ${b.total_gf} / xG: ${b.total_xg.toFixed(2)}). `;
+                }
+
+                if (a_avg_ts < 8.0 && a.avg_xg < 1.0) {
+                    lambda1 -= 0.25;
+                    output_katsayi += `📉 HÜCUM KRİZİ (EV SAHİBİ): Şut (Ort: ${a_avg_ts.toFixed(1)}) ve xG (Ort: ${a.avg_xg.toFixed(2)}) üretimleri felaket seviyede. `;
+                }
+                if (b_avg_ts < 8.0 && b.avg_xg < 1.0) {
+                    lambda2 -= 0.25;
+                    output_katsayi += `📉 HÜCUM KRİZİ (DEPLASMAN): Şut (Ort: ${b_avg_ts.toFixed(1)}) ve xG (Ort: ${b.avg_xg.toFixed(2)}) krizde. `;
+                }
+
+                if (a.avg_pos >= 60 && b.avg_pos <= 42) {
+                    lambda1 = Math.max(lambda1, 2.20);
+                    lambda2 = Math.min(lambda2 * 0.45, 0.65);
+                    output_katsayi += `👑 Ev sahibi topla oynamada rakibi ezdi. Deplasmanın hücum kanalları tıkandı! `;
+                }
+
+                if (b.cs_count === 3 && b.total_ga === 0) {
+                    lambda1 = Math.min(lambda1 * 0.38, 1.15);
+                    isTrap = true;
+                    trapReasons.push("🧱 ÇELİK KALKAN ALARMI: Deplasman takımı son 3 maçında 0 gol yedi!");
+                }
+
+                if (window.isChaoticLeague) {
+                    isTrap = true;
+                    trapReasons.push("🌪️ KAOTİK LİG DİNAMİĞİ: Bu ligde istikrar düşüktür; sürprize açıktır.");
+                }
+
+                lambda1 = Math.max(0.40, lambda1);
+                lambda2 = Math.max(0.20, lambda2);
+
+                let totalExpectedGoals = lambda1 + lambda2;
+
+                function factorial(n) { let f = 1; for(let i = 2; i <= n; i++) f *= i; return f; }
+                function poisson(k, lam) { return Math.exp(-lam) * Math.pow(lam, k) / factorial(k); }
+
+                let p_home = 0, p_draw = 0, p_away = 0, p_over25 = 0, p_kg_var = 0;
+                let p_home15 = 0, p_home_o05 = 0, p_away_o05 = 0, p_away15 = 0;
+
+                for(let i = 0; i <= 8; i++) {
+                    for(let j = 0; j <= 8; j++) {
+                        let p = poisson(i, lambda1) * poisson(j, lambda2);
+                        if(i > j) p_home += p;
+                        else if(i === j) p_draw += p;
+                        else p_away += p;
+
+                        if(i + j >= 3) p_over25 += p;
+                        if(i > 0 && j > 0) p_kg_var += p;
+                        if(i >= 2) p_home15 += p;
+                        if(i >= 1) p_home_o05 += p;
+                        if(j >= 1) p_away_o05 += p;
+                        if(j >= 2) p_away15 += p;
+                    }
+                }
+
+                function getPoissonMode(lam, isAway, oppDefGA) {
+                    let zeroThreshold = 0.75;
+                    if (isAway && oppDefGA <= 2) {
+                        zeroThreshold = 1.25; 
+                    } else if (isAway && oppDefGA <= 3) {
+                        zeroThreshold = 1.05;
+                    }
+                    if (lam < zeroThreshold) return 0; 
+                    if (lam < 1.55) return 1; 
+                    if (lam < 2.45) return 2; 
+                    if (lam < 3.45) return 3; 
+                    return 4;
+                }
+
+                let final_A = getPoissonMode(lambda1, false, b.total_ga);
+                let final_B = getPoissonMode(lambda2, true, a.total_ga);
+
+                let isOverFavored = (totalExpectedGoals >= 2.40 || p_over25 >= 0.50);
+                if (isOverFavored && (final_A + final_B) < 3) {
+                    if (lambda1 >= lambda2) final_A = Math.max(2, final_A);
+                    else final_B = Math.max(2, final_B);
+                    if ((final_A + final_B) < 3) {
+                        if (lambda1 >= 1.35) final_A = 2;
+                        if (lambda2 >= 1.35) final_B = 2;
+                    }
+                } else if (!isOverFavored && (final_A + final_B) >= 3) {
+                    if (final_A > final_B && lambda2 < 0.85) { final_A = 2; final_B = 0; }
+                    else if (final_B > final_A && lambda1 < 0.85) { final_A = 0; final_B = 2; }
+                }
+
+                let display_final_A = final_A;
+                let display_final_B = final_B;
+                
+                if (final_A === 1 && a.total_gf <= 1 && lambda1 < 1.15) display_final_A = "0/1 (BELİRSİZ)";
+                if (final_B === 1 && b.total_gf <= 1 && lambda2 < 1.15) display_final_B = "0/1 (BELİRSİZ)";
+
+                let allOptions = [];
+
+                let rawOverUnderProb = isOverFavored ? p_over25 : (1 - p_over25);
+                let finalOverUnderPct = Math.round(rawOverUnderProb * 100);
+                let isOverUnderBorderline = (totalExpectedGoals >= 2.00 && totalExpectedGoals <= 2.48);
+                let ouPriority = 1.40;
+
+                if (isOverUnderBorderline) {
+                    ouPriority = 1.10; 
+                    if (finalOverUnderPct > 68) finalOverUnderPct = 68; 
+                } else if ((!isOverFavored && totalExpectedGoals < 1.85) || (isOverFavored && totalExpectedGoals > 2.80)) {
+                    ouPriority = 1.55; 
+                    finalOverUnderPct = Math.min(88, finalOverUnderPct + 5);
+                }
+
+                allOptions.push({ 
+                    name: (final_A + final_B >= 3) ? "2.5 ÜST" : "2.5 ALT", 
+                    prob: finalOverUnderPct / 100, 
+                    priority: ouPriority,
+                    isBorderline: isOverUnderBorderline
+                });
+
+                // ========================================================
+                // 💎 YENİ: KG VAR BANKOLUK GÜCÜNE KAVUŞTU!
+                // ========================================================
+                let isKgVarSkor = (final_A >= 1 && final_B >= 1);
+                
+                if (isKgVarSkor) {
+                    if (p_kg_var >= 0.42) {
+                        // Eğer maçta kevgir savunma varsa veya tempo yüksekse KG VAR bankolaşır (%80)
+                        let kgBonus = (totalExpectedGoals >= 2.40 || a.avg_ga >= 1.6 || b.avg_ga >= 1.6) ? 0.24 : 0.16;
+                        let pct = Math.round(Math.min(0.88, Math.max(p_kg_var + kgBonus, 0.80)) * 100);
+                        allOptions.push({ name: "KARŞILIKLI GOL VAR", prob: pct / 100, priority: 1.55, type: "normal" });
+                    } else {
+                        allOptions.push({ name: "KG RİSKLİ (BELİRSİZ)", prob: 0.80, priority: 9.99, type: "warn" });
+                    }
+                } else {
+                    let pct = Math.round(Math.max((1 - p_kg_var) + 0.15, 0.78) * 100);
+                    allOptions.push({ name: "KARŞILIKLI GOL YOK", prob: pct / 100, priority: 1.50, type: "normal" });
+                }
+
+                // ========================================================
+                // 💎 YENİ: TARAF VE TAKIM GOLÜ BANKOLARI
+                // ========================================================
+                if (final_A > final_B) {
+                    let winBonus = (lambda1 >= lambda2 + 0.4 || b.avg_ga >= 1.6) ? 0.20 : 0.14;
+                    let pct = Math.round(Math.min(0.90, Math.max(p_home + winBonus, 0.78)) * 100);
+                    allOptions.push({ name: "MAÇ SONUCU 1", prob: pct / 100, priority: 1.65 });
+                } else if (final_B > final_A) {
+                    let winBonus = (lambda2 >= lambda1 + 0.4 || a.avg_ga >= 1.6) ? 0.20 : 0.14;
+                    let pct = Math.round(Math.min(0.90, Math.max(p_away + winBonus, 0.78)) * 100);
+                    allOptions.push({ name: "MAÇ SONUCU 2", prob: pct / 100, priority: 1.65 });
+                } else {
+                    let pct = Math.round(Math.max(p_draw + (p_home*0.5), 0.72) * 100);
+                    allOptions.push({ name: "ÇİFTE ŞANS 1-X", prob: pct / 100, priority: 1.25 });
+                }
+
+                let homeOverUnderBet, awayOverUnderBet;
+
+                if (final_A >= 2) {
+                    let pctRaw = p_home15;
+                    if (lambda1 >= 1.60 || b.avg_ga >= 1.6) pctRaw += 0.15;
+                    let pct = Math.round(Math.min(0.88, Math.max(pctRaw, 0.79)) * 100);
+                    homeOverUnderBet = { name: "EV SAHİBİ 1.5 ÜST", prob: pct/100, pct: pct, prio: 1.55 };
+                } else if (final_A === 1 && typeof display_final_A !== "string") {
+                    let pctRaw = p_home_o05;
+                    if (totalExpectedGoals < 2.50) pctRaw -= 0.10; 
+                    let pct = Math.round(Math.max(pctRaw, 0.65) * 100); 
+                    homeOverUnderBet = { name: "EV SAHİBİ 0.5 ÜST", prob: pct/100, pct: pct, prio: 1.15 }; 
+                } else {
+                    let pctRaw = 1 - p_home15;
+                    if (lambda1 < 1.0) pctRaw += 0.10;
+                    let pct = Math.round(Math.max(pctRaw, 0.78) * 100);
+                    homeOverUnderBet = { name: "EV SAHİBİ 1.5 ALT", prob: pct/100, pct: pct, prio: 1.35 };
+                }
+
+                if (final_B >= 2) {
+                    let pctRaw = p_away15;
+                    // Kevgir savunma veya yüksek güçte Deplasman 1.5 Üst bankolaşır (%79)
+                    if (lambda2 >= 1.60 || a.avg_ga >= 1.6) pctRaw += 0.15;
+                    let pct = Math.round(Math.min(0.88, Math.max(pctRaw, 0.79)) * 100);
+                    awayOverUnderBet = { name: "DEPLASMAN 1.5 ÜST", prob: pct/100, pct: pct, prio: 1.55 }; 
+                } else if (final_B === 1 && typeof display_final_B !== "string") {
+                    let pctRaw = p_away_o05;
+                    if (totalExpectedGoals < 2.50) pctRaw -= 0.10;
+                    let pct = Math.round(Math.max(pctRaw, 0.65) * 100); 
+                    awayOverUnderBet = { name: "DEPLASMAN 0.5 ÜST", prob: pct/100, pct: pct, prio: 1.15 }; 
+                } else {
+                    let pctRaw = 1 - p_away15;
+                    if (lambda2 < 1.0) pctRaw += 0.10;
+                    let pct = Math.round(Math.max(pctRaw, 0.78) * 100);
+                    awayOverUnderBet = { name: "DEPLASMAN 1.5 ALT", prob: pct/100, pct: pct, prio: 1.35 };
+                }
+
+                allOptions.push({ name: homeOverUnderBet.name, prob: homeOverUnderBet.prob, priority: homeOverUnderBet.prio });
+                allOptions.push({ name: awayOverUnderBet.name, prob: awayOverUnderBet.prob, priority: awayOverUnderBet.prio });
+
+                allOptions.sort((x, y) => (y.prob * y.priority) - (x.prob * x.priority));
+                let selectedBets = allOptions.slice(0, 3);
+
+                let output_gerekce = `Savaş temposu analizi tamamlandı. Toplam beklenen gol kapasitesi: ${totalExpectedGoals.toFixed(2)}. AIPROV karar matrisi %${finalOverUnderPct} güvenle ${(final_A + final_B >= 3) ? "2.5 ÜST" : "2.5 ALT"} senaryosuna işaret ediyor. Karşılıklı şut ve savunma direnci tartılarak nihai infaz kilitlendi.`;
+
+                setTimeout(() => {
+                    document.getElementById('resultPanel').style.display = 'block';
+                    document.getElementById('liveScore').innerText = `${final_A} - ${final_B}`;
+
+                    let trapContainer = document.getElementById('trapWarningContainer');
+                    if (isTrap) {
+                        runTrapTypewriter(
+                            "⚠️ MAFYA RADARI: MAYIN TARLASI",
+                            "🚨 BU MAÇTAN UZAK DUR! (AŞIRI RİSKLİ TUZAK MAÇ) 🚨",
+                            trapReasons,
+                            "💡 MOURINHO TAVSİYESİ: Taraf veya standart bahis alma! Cüzdanını koru!"
+                        );
+                    } else {
+                        trapContainer.innerHTML = '';
+                    }
+
+                    let vipGrid = document.getElementById('vipCardsGrid');
+                    vipGrid.innerHTML = selectedBets.map(bet => {
+                        let pct = Math.round(bet.prob * 100);
+                        let tierClass, badgeClass, pctClass, label;
+
+                        if (bet.type === "warn") {
+                            tierClass = "tier-warn";
+                            badgeClass = "badge-warn";
+                            pctClass = "pct-warn";
+                            label = "⚠️ RİSK UYARISI";
+                        } else {
+                            let isBanko = (pct >= 78 && !bet.isBorderline);
+                            tierClass = isBanko ? "tier-high" : "tier-mid";
+                            badgeClass = isBanko ? "badge-green" : "badge-cyan";
+                            pctClass = isBanko ? "pct-green" : "pct-cyan";
+                            label = isBanko ? "💎 KASALIK BANKO" : "🔥 GÜÇLÜ TERCİH";
+                        }
+
+                        return `
+                            <div class="vip-card ${tierClass}">
+                                <div class="vip-card-left">
+                                    <span class="vip-card-badge ${badgeClass}">${label}</span>
+                                    <span class="vip-card-name">${bet.name}</span>
+                                </div>
+                                <div class="vip-card-right">
+                                    <span class="vip-card-pct ${pctClass}">%${pct}</span>
+                                </div>
+                            </div>
+                        `;
+                    }).join('');
+
+                    let htmlStr = `
+                        <div class="output-section" style="border-left: 4px solid var(--gold);">
+                            <div class="output-title" style="color:var(--gold);">⚡ ÖZEL TAKIM GOLLERİ: EV & DEPLASMAN ALT / ÜST RADARI</div>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin-top: 10px;">
+                                <div style="background: rgba(0,0,0,0.45); padding: 12px 16px; border-radius: 10px; border: 1px solid rgba(0, 229, 255, 0.25);">
+                                    <div style="font-size:0.75em; color:var(--primary); font-weight:900; text-transform:uppercase; margin-bottom:4px;">🏠 EV SAHİBİ GOL LİMİTİ</div>
+                                    <div style="font-size:1.15em; font-weight:900; color:#fff;">${homeOverUnderBet.name} (%${homeOverUnderBet.pct})</div>
+                                    <div style="font-size:0.78em; color:var(--text-dim); margin-top:4px;">Hücum Gücü (Beklenen Gol λ): ${lambda1.toFixed(2)}</div>
+                                </div>
+                                <div style="background: rgba(0,0,0,0.45); padding: 12px 16px; border-radius: 10px; border: 1px solid rgba(56, 189, 248, 0.25);">
+                                    <div style="font-size:0.75em; color:#38bdf8; font-weight:900; text-transform:uppercase; margin-bottom:4px;">✈️ DEPLASMAN GOL LİMİTİ</div>
+                                    <div style="font-size:1.15em; font-weight:900; color:#fff;">${awayOverUnderBet.name} (%${awayOverUnderBet.pct})</div>
+                                    <div style="font-size:0.78em; color:var(--text-dim); margin-top:4px;">Hücum Gücü (Beklenen Gol λ): ${lambda2.toFixed(2)}</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="output-section">
+                            <div class="output-title">🩸 KARTEL İSTİHBARATI & SIKLET DENGESİ</div>
+                            <div class="output-text">${output_trend || "Normal standart form seyri."}</div>
+                        </div>
+                        <div class="output-section">
+                            <div class="output-title">⚔️ DEFANSİF DİRENÇ & TEMPO SEVİYESİ</div>
+                            <div class="output-text">${output_katsayi || "Takımların savunma ve şut direnç katsayıları tartıldı."} (Ev Güç λ: ${lambda1.toFixed(2)} · Dep Güç λ: ${lambda2.toFixed(2)})</div>
+                        </div>
+                        <div class="output-section">
+                            <div class="output-title">🧠 TEPELİ ANALİZ: NİHAİ İNFAZ KARARI</div>
+                            <div class="output-text">${output_gerekce}</div>
+                        </div>
+                        <div class="final-score-box" style="font-size: clamp(1.05em, 3.5vw, 1.5em);">🎯 FİNAL SKOR İNFAZI: ${display_final_A} - ${display_final_B}</div>
+                    `;
+                    document.getElementById('analysisContent').innerHTML = htmlStr;
+                    window.scrollTo({ top: document.getElementById('resultPanel').offsetTop, behavior: 'smooth' });
+
+                    btn.innerText = "💀 YENİDEN İNFAZ MODU BAŞLAT 🚀";
+                    btn.disabled = false;
+                }, 600);
+            } catch (err) {
+                console.error("Analiz Hatası:", err);
+                btn.innerText = "❌ HATA OLUŞTU (TEKRAR DENE)";
+                btn.disabled = false;
+            }
+        }
+    </script>
+</body>
+</html>
